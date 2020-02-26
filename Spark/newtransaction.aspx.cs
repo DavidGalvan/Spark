@@ -23,7 +23,23 @@ namespace Spark
 
         protected void ButtonSubmit_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (Utilities.GetBlockedCustomers().
+                    Contains(DropDownListCustomer.SelectedValue)
+                    )
+                {
+                    LabelError.Text = "That customer is currently out of use";
+                }
+                else
+                {
 
+                }
+            }
+            catch (Exception Ex)
+            {
+                LabelError.Text = Ex.Message;
+            }
         }
     }
 }
