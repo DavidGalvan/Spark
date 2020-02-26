@@ -11,7 +11,6 @@ namespace Spark
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
         private decimal CalculateVAT(decimal Amount)

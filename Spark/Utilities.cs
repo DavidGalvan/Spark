@@ -7,13 +7,15 @@ namespace Spark
 {
     public static class Utilities
     {
-        public static string[] GetBlockedCustomers()
+        public static List<string> GetBlockedCustomers()
         {
-            string[] Customers = new string[3];
-            Customers[0] = "6";
-            Customers[1] = "9";
-            Customers[2] = "11";
-            return Customers;
+            List<string> BlockedCustomers = new List<string>();
+            BlockedCustomers.Add("6");
+            BlockedCustomers.Add("9");
+            BlockedCustomers.Add("11");
+            BlockedCustomers.Remove("11");
+            string SecondCustomer = BlockedCustomers[1];
+            return BlockedCustomers;
         }
     }
 }
