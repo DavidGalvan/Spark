@@ -11,7 +11,12 @@ namespace Spark
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            using (SparkDataContext Data = new SparkDataContext())
+            {
+                Customer MyCustomer = Data.Customers.
+                                      Single(Customer => Customer.CustomerID == 1);
+                LabelReport.Text = MyCustomer.CustomerName;
+            }
         }
     }
 }
