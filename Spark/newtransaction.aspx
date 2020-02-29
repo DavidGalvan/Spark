@@ -34,8 +34,9 @@
                             Customer
                         </td>
                         <td>
-                            <asp:DropDownList ID="DropDownListCustomer" runat="server" DataTextField="CustomerName" DataValueField="CustomerID">
+                            <asp:DropDownList ID="DropDownListCustomer" runat="server" DataTextField="CustomerName" DataValueField="CustomerID" DataSourceID="dbconnection">
                             </asp:DropDownList>
+                            <asp:SqlDataSource ID="dbconnection" runat="server" ConnectionString="<%$ ConnectionStrings:SparkConnectionString %>" SelectCommand="SELECT * FROM [Customer]"></asp:SqlDataSource>
                         </td>
                     </tr>
                     <tr>

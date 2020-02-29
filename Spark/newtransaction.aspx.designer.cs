@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Spark {
-    
-    
-    public partial class newtransaction {
-        
+namespace Spark
+{
+
+
+    public partial class newtransaction
+    {
+
         /// <summary>
         /// Head1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace Spark {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
-        
+
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace Spark {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
         /// PanelAddInvoice control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace Spark {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel PanelAddInvoice;
-        
+
         /// <summary>
         /// DropDownListCustomer control.
         /// </summary>
@@ -47,7 +49,16 @@ namespace Spark {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropDownListCustomer;
-        
+
+        /// <summary>
+        /// dbconnection control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource dbconnection;
+
         /// <summary>
         /// TextBoxInvoiceNumber control.
         /// </summary>
@@ -56,7 +67,7 @@ namespace Spark {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBoxInvoiceNumber;
-        
+
         /// <summary>
         /// RequiredFieldValidatorInvoiceNumber control.
         /// </summary>
@@ -65,7 +76,7 @@ namespace Spark {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorInvoiceNumber;
-        
+
         /// <summary>
         /// TextBoxAmount control.
         /// </summary>
@@ -74,7 +85,7 @@ namespace Spark {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBoxAmount;
-        
+
         /// <summary>
         /// RequiredFieldValidatorAmount control.
         /// </summary>
@@ -83,7 +94,7 @@ namespace Spark {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorAmount;
-        
+
         /// <summary>
         /// RangeValidatorAmount control.
         /// </summary>
@@ -92,7 +103,7 @@ namespace Spark {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RangeValidator RangeValidatorAmount;
-        
+
         /// <summary>
         /// TextBoxTaxAmount control.
         /// </summary>
@@ -101,7 +112,7 @@ namespace Spark {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBoxTaxAmount;
-        
+
         /// <summary>
         /// RequiredFieldValidatorTaxAmount control.
         /// </summary>
@@ -110,7 +121,7 @@ namespace Spark {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorTaxAmount;
-        
+
         /// <summary>
         /// RangeValidatorTaxAmount control.
         /// </summary>
@@ -119,7 +130,7 @@ namespace Spark {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RangeValidator RangeValidatorTaxAmount;
-        
+
         /// <summary>
         /// LabelError control.
         /// </summary>
@@ -128,7 +139,7 @@ namespace Spark {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelError;
-        
+
         /// <summary>
         /// ButtonSubmit control.
         /// </summary>
@@ -137,7 +148,7 @@ namespace Spark {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ButtonSubmit;
-        
+
         /// <summary>
         /// PanelConfirmAdded control.
         /// </summary>
