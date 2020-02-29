@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Spark">
+  <DataContextMoniker Name="/SparkDataContext" />
+  <nestedChildShapes>
+    <classShape Id="f435742b-f6a7-4e7a-811f-43b67f1bf788" absoluteBounds="0.875, 2.25, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/SparkDataContext/Customer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="75d41d46-7905-4f53-b936-3b425c030e42" absoluteBounds="0.89000000000000012, 2.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="74a802da-aa9c-4cd8-8771-0d1d5f022608" absoluteBounds="4.25, 2.375, 2, 1.9631982421875">
+      <DataClassMoniker Name="/SparkDataContext/Invoice" />
+      <nestedChildShapes>
+        <elementListCompartment Id="55756a35-408f-424c-80f0-96c3c3ff3c9e" absoluteBounds="4.265, 2.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.875 : 2.90949625651042); (4.25 : 2.90949625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SparkDataContext/Customer/Customer_Invoice" />
+      <nodes>
+        <classShapeMoniker Id="f435742b-f6a7-4e7a-811f-43b67f1bf788" />
+        <classShapeMoniker Id="74a802da-aa9c-4cd8-8771-0d1d5f022608" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
