@@ -13,9 +13,16 @@ namespace Spark
         {
             using (SparkDataContext Data = new SparkDataContext())
             {
-                Customer MyCustomer = Data.Customers.
-                                      Single(Customer => Customer.CustomerID == 1);
-                LabelReport.Text = MyCustomer.CustomerName;
+                var Invoices = Data.Invoices.Where(Invoice => Invoice.InvoiceAmount > 40);
+                string Output = "";
+                foreach (Invoice InvoiceToOutput in Invoices)
+                {
+                    Output += InvoiceToOutput.Customer.CustomerName;
+                    Output += " - ";
+                    Output += InvoiceToOutput.InvoiceNumber;
+                    Output += "<br / >";
+                }
+                LabelReport.Text = Output;
             }
         }
     }
