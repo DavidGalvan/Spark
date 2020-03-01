@@ -32,7 +32,19 @@ namespace Spark
                 }
                 else
                 {
-
+                    using (SparkDataContext Data = new SparkDataContext())
+                    {
+                        Invoice NewInvoice = new Invoice();
+                        NewInvoice.CustomerID = 1;
+                        NewInvoice.InvoiceNumber = TextBoxInvoiceNumber.Text;
+                        NewInvoice.InvoiceAmount = Convert.ToDecimal(TextBoxAmount.Text);
+                        NewInvoice.InvoiceTaxAmount = Convert.ToDecimal(TextBoxTaxAmount.Text);
+                        NewInvoice.InvoiceDate = DateTime.Now;
+                        Data.Invoices.InsertOnSubmit(NewInvoice);
+                        Data.SubmitChanges();
+                        PanelAddInvoice.Visible = false;
+                        PanelConfirmAdded.Visible = true;
+                    }
                 }
             }
             catch (Exception Ex)
