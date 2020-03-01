@@ -14,7 +14,7 @@ namespace Spark
             using (SparkDataContext Data = new SparkDataContext())
             {
                 Invoice MyInvoice = Data.Invoices.Single
-                    (Invoice => Invoice.InvoiceID == 2);
+                    (Invoice => Invoice.InvoiceID == 6);
                 LabelReport.Text = MyInvoice.InvoiceNumber;
                 LabelReport.Text = "<br />";
                 LabelReport.Text += MyInvoice.InvoiceAmount.ToString();
@@ -22,15 +22,14 @@ namespace Spark
             }
         }
 
-        protected void ButtonUpdateInvoice_Click(object sender, EventArgs e)
+        protected void ButtonDeleteInvoice_Click(object sender, EventArgs e)
         {
-            using (SparkDataContext Data = new SparkDataContext())
+            using (SparkDataContext Data = new SparkDataContext()) 
             {
                 Invoice MyInvoice = Data.Invoices.Single
-                    (Invoice => Invoice.InvoiceID == 2);
-                MyInvoice.InvoiceAmount = 123;
+                    (Invoice => Invoice.InvoiceID == 3);
+                Data.Invoices.DeleteOnSubmit(MyInvoice);
                 Data.SubmitChanges();
-
             }
         }
     }
