@@ -13,18 +13,20 @@ namespace Spark
         {
             using (SparkDataContext Data = new SparkDataContext())
             {
-                var Invoices = Data.Invoices
-                              .Where(Invoice => Invoice.InvoiceAmount > 40)
-                              .OrderByDescending(Invoice => Invoice.InvoiceNumber).Take(1);
-                string Output = "";
-                foreach (Invoice InvoiceToOutput in Invoices)
+                Customer CheckCustomer = Data.Customers
+                                         .SingleOrDefault(Customer => Customer
+                                         .CustomerID == 99);
+                if (CheckCustomer == null)
                 {
-                    Output += InvoiceToOutput.Customer.CustomerName;
-                    Output += " - ";
-                    Output += InvoiceToOutput.InvoiceNumber;
-                    Output += "<br / >";
+                    LabelReport.Text = "Customer does not exist";
                 }
-                LabelReport.Text = Output;
+                else
+                {
+                    LabelReport.Text = CheckCustomer.CustomerName;
+                }
+                    
+              
+                
             }
         }
     }
