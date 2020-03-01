@@ -13,20 +13,24 @@ namespace Spark
         {
             using (SparkDataContext Data = new SparkDataContext())
             {
-                Customer CheckCustomer = Data.Customers
-                                         .SingleOrDefault(Customer => Customer
-                                         .CustomerID == 99);
-                if (CheckCustomer == null)
-                {
-                    LabelReport.Text = "Customer does not exist";
-                }
-                else
-                {
-                    LabelReport.Text = CheckCustomer.CustomerName;
-                }
-                    
-              
-                
+                Invoice MyInvoice = Data.Invoices.Single
+                    (Invoice => Invoice.InvoiceID == 2);
+                LabelReport.Text = MyInvoice.InvoiceNumber;
+                LabelReport.Text = "<br />";
+                LabelReport.Text += MyInvoice.InvoiceAmount.ToString();
+
+            }
+        }
+
+        protected void ButtonUpdateInvoice_Click(object sender, EventArgs e)
+        {
+            using (SparkDataContext Data = new SparkDataContext())
+            {
+                Invoice MyInvoice = Data.Invoices.Single
+                    (Invoice => Invoice.InvoiceID == 2);
+                MyInvoice.InvoiceAmount = 123;
+                Data.SubmitChanges();
+
             }
         }
     }
