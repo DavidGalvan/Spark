@@ -25,7 +25,6 @@
         <div class="ClearFloats">
         <div class="Content">
             <asp:Label ID="LabelReport" runat="server"></asp:Label>
-            <asp:Button ID="ButtonDeleteInvoice" runat="server" OnClick="ButtonDeleteInvoice_Click" Text="Delete Invoice" />
         </div>
         <div class="Footer">
         </div>

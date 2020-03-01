@@ -11,26 +11,18 @@ namespace Spark
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            using (SparkDataContext Data = new SparkDataContext())
+            List<string> BlockedCustomers = Utilities.GetBlockedCustomers();
+            var SubList = BlockedCustomers.Where(CustomerID =>
+                                                 CustomerID == "6"
+                                                 || CustomerID == "9"
+                                                 || CustomerID == "98");
+            foreach (string CustomerID in SubList)
             {
-                Invoice MyInvoice = Data.Invoices.Single
-                    (Invoice => Invoice.InvoiceID == 6);
-                LabelReport.Text = MyInvoice.InvoiceNumber;
-                LabelReport.Text = "<br />";
-                LabelReport.Text += MyInvoice.InvoiceAmount.ToString();
-
+                LabelReport.Text += CustomerID;
+                LabelReport.Text += "<br />";
             }
         }
 
-        protected void ButtonDeleteInvoice_Click(object sender, EventArgs e)
-        {
-            using (SparkDataContext Data = new SparkDataContext()) 
-            {
-                Invoice MyInvoice = Data.Invoices.Single
-                    (Invoice => Invoice.InvoiceID == 3);
-                Data.Invoices.DeleteOnSubmit(MyInvoice);
-                Data.SubmitChanges();
-            }
-        }
+       
     }
 }
