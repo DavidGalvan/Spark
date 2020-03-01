@@ -13,7 +13,9 @@ namespace Spark
         {
             using (SparkDataContext Data = new SparkDataContext())
             {
-                var Invoices = Data.Invoices.Where(Invoice => Invoice.InvoiceAmount > 40);
+                var Invoices = Data.Invoices
+                              .Where(Invoice => Invoice.InvoiceAmount > 40)
+                              .OrderByDescending(Invoice => Invoice.InvoiceNumber).Take(1);
                 string Output = "";
                 foreach (Invoice InvoiceToOutput in Invoices)
                 {
